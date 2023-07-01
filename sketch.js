@@ -89,9 +89,9 @@ var message = document.querySelector('#message');
           var label1=""
 
 
-          if(isBook==1){document.querySelector('#btnGiveCommand').innerText='Say the name of the Book';console.log(isBook)}
+          if(isBook==1){document.querySelector('#btnGiveCommand').innerText='New Verse';console.log(isBook);Say.textContent='say the name of the Book';}
  
-          if(isBook==0){document.querySelector('#btnGiveCommand').innerText='say "____verse___"';console.log(isBook)}
+          if(isBook==0){document.querySelector('#btnGiveCommand').innerText='New Verse';Say.textContent='say "____verse___"';console.log(isBook)}
           var verse= httpGet(path, 'text', getText);
           verses.textContent=verse
  reference.textContent=finalBook+" "+finalChapter+":"+finalVerse
@@ -119,7 +119,7 @@ recognition.onnomatch = (event) => {
         document.querySelector('#btnGiveCommand').addEventListener('click', function(){
             recognition.start();
 isBook=1
-          document.querySelector('#btnGiveCommand').innerText='Book'
+          //document.querySelector('#btnGiveCommand').innerText='Book'
         });
 
 
